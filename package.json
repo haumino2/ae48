@@ -1,0 +1,10 @@
+{
+  "name": "ae48-so-quy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/import-data.mjs",
+    "check": "node scripts/check.mjs && node scripts/check-requests.mjs",
+    "dev": "node scripts/serve.mjs"
+  }
+}

@@ -1,5 +1,7 @@
 # AE48 · Sổ quỹ
 
+> Repository công khai này sử dụng dữ liệu minh họa. Không có tên, công nợ hoặc file Excel thật. Bản dữ liệu thật vẫn giữ riêng trên máy.
+
 Website tĩnh với biểu mẫu gửi bill và góp ý qua Netlify Forms. Không có tài khoản admin hoặc xác nhận thanh toán trong app. Công nợ vẫn cập nhật qua Excel. Trình duyệt chỉ nhớ tên đang xem, không giả lưu yêu cầu làm dữ liệu dùng chung.
 
 ## Xem và kiểm tra

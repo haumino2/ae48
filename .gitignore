@@ -1,0 +1,6 @@
+.sites-runtime/
+node_modules/
+outputs/
+*.log
+.openai/
+scripts/source-snapshot.json
