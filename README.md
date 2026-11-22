@@ -1,7 +1,5 @@
 # AE48 · Sổ quỹ
 
-> Repository công khai này sử dụng dữ liệu minh họa. Không có tên, công nợ hoặc file Excel thật. Bản dữ liệu thật vẫn giữ riêng trên máy.
-
 Website tĩnh với biểu mẫu gửi bill và góp ý qua Netlify Forms. Không có tài khoản admin hoặc xác nhận thanh toán trong app. Công nợ vẫn cập nhật qua Excel. Trình duyệt chỉ nhớ tên đang xem, không giả lưu yêu cầu làm dữ liệu dùng chung.
 
 ## Xem và kiểm tra
@@ -34,3 +32,8 @@ Dữ liệu tĩnh trong `dist` là dữ liệu hiện hành được đưa cùng
 Đây là hộp nhận yêu cầu, không phải màn hình duyệt trong app hay luồng comment công khai. Yêu cầu và góp ý gửi riêng admin. Không tự thay đổi data.json sau khi nhận form. Nhận file JPG/PNG/WebP/PDF tối đa 5MB. Không upload hóa đơn thật trong kiểm thử nếu chưa được cho phép.
 
 Chưa kiểm chứng nhận yêu cầu thực tế trên Netlify vì chưa có dự án AE48 đã deploy/kết nối. Sau khi bật form detection phải redeploy rồi thử cả hai biểu mẫu trước khi chia sẻ cho nhóm. Tính năng này không hoạt động trên Sites hoặc GitHub Pages chỉ bằng cách tải HTML lên.
+
+
+## Khoản đóng được xác nhận ngoài Excel
+
+`scripts/confirmed-payments.json` lưu các khoản admin đã xác nhận, được bỏ qua khi đưa mã lên GitHub. Chạy build để trừ khoản đóng vào tổng công nợ người đó. Không tự gán cho buổi khi chưa được chỉ định. Ngày ghi nhận khác ngày chuyển thực tế; không suy đoán ngày chuyển. Khi nhập file mới, đối soát để không ghi nhận cùng khoản hai lần. Không xóa khoản thu chỉ để ép công nợ về 0.

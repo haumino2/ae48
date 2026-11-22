@@ -4,3 +4,5 @@ outputs/
 *.log
 .openai/
 scripts/source-snapshot.json
+scripts/confirmed-payments.json
+scripts/debt-adjustments.json
