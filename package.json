@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/import-data.mjs",
-    "check": "node scripts/check.mjs && node scripts/check-requests.mjs",
+    "check": "node scripts/check.mjs && node scripts/check-requests.mjs && node scripts/check-payments.mjs",
     "dev": "node scripts/serve.mjs"
   }
 }

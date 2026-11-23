@@ -1,7 +1,7 @@
 {
   "version": 1,
   "group": "AE48",
-  "updatedAt": "2026-11-22T11:55:18Z",
+  "updatedAt": "2026-11-23T02:58:04Z",
   "sourceTitle": "Bản sao của AE48 - BILL SHARE.xlsx",
   "sourceUrl": "https://drive.google.com/file/d/1gOfRmBKYia9Hf4Re58uw8K3AB64WjqHL/view",
   "timezone": "Asia/Ho_Chi_Minh",
@@ -376,8 +376,8 @@
         "N8",
         "N9"
       ],
-      "paid": 1100000,
-      "waived": 68119
+      "paid": 1168000,
+      "waived": 119
     },
     {
       "id": "m5",
@@ -385,7 +385,7 @@
       "guest": false,
       "share": 517500,
       "advance": 0,
-      "balance": 517500,
+      "balance": 0,
       "sessions": [
         "S14",
         "S15",
@@ -393,7 +393,7 @@
         "S17",
         "S18"
       ],
-      "paid": 0
+      "paid": 517500
     },
     {
       "id": "m6",
@@ -502,25 +502,65 @@
   "openCount": 7,
   "payments": [
     {
-      "id": "receipt-trung-den-20261122-01",
+      "id": "receipt-trung-den-20261123-01",
       "memberName": "Trung Đen",
-      "amount": 1100000,
-      "recordedAt": "2026-11-22T11:46:34Z",
+      "amount": 1168000,
+      "recordedAt": "2026-11-23T02:58:04Z",
       "paidAt": null,
-      "note": "Admin xác nhận trong chat: Trung Đen đã đóng 1tr1. Chưa chỉ định buổi và ngày chuyển thực tế."
+      "paidDate": "2026-11-16",
+      "datePrecision": "approximate",
+      "status": "confirmed",
+      "note": "Admin xác nhận lại ngày 23/11/2026: đã pay 1168 (1.168.000đ), hết nợ, khoảng một tuần trước. Thay cho ghi nhận 1.100.000đ và miễn 68.119đ trước đó; 119đ chênh lệch được clear riêng.",
+      "supersedes": [
+        "receipt-trung-den-20261122-01",
+        "waiver-trung-den-20261122-01"
+      ]
+    },
+    {
+      "id": "receipt-thong-20261123-01",
+      "memberName": "Thống",
+      "amount": 517500,
+      "recordedAt": "2026-11-23T02:58:04Z",
+      "paidAt": null,
+      "paidDate": "2026-11-16",
+      "datePrecision": "approximate",
+      "status": "confirmed",
+      "note": "Admin xác nhận ngày 23/11/2026: Thống đã trả hết nợ, khoảng một tuần trước. Số tiền theo dư nợ cần đóng 517.500đ; chưa có ngày chuyển chính xác."
     }
   ],
-  "received": 1100000,
+  "received": 1685500,
   "sourceUpdatedAt": "2026-11-22T09:54:54.047Z",
   "adjustments": [
     {
-      "id": "waiver-trung-den-20261122-01",
+      "id": "waiver-trung-den-rounding-20261123-01",
       "type": "WAIVER",
       "memberName": "Trung Đen",
-      "amount": 68119,
-      "recordedAt": "2026-11-22T11:55:18Z",
-      "reason": "Admin yêu cầu clear toàn bộ phần còn lại để về 0đ cần đóng; không ghi tăng tiền đã nhận."
+      "amount": 119,
+      "recordedAt": "2026-11-23T02:58:04Z",
+      "reason": "Sau khi admin xác nhận lại đã đóng 1.168.000đ và hết nợ, clear 119đ chênh lệch so với phần chia nguyên đồng. Thay cho khoản miễn 68.119đ cũ; không ghi tăng tiền thực nhận."
     }
   ],
-  "waived": 68119
+  "waived": 119,
+  "paymentCorrections": [
+    {
+      "recordedAt": "2026-11-23T02:58:04Z",
+      "memberName": "Trung Đen",
+      "reason": "Admin xác nhận lại tổng tiền đã thanh toán và thời điểm ước tính.",
+      "previousReceipt": {
+        "id": "receipt-trung-den-20261122-01",
+        "amount": 1100000,
+        "recordedAt": "2026-11-22T11:46:34Z",
+        "paidAt": null
+      },
+      "previousAdjustment": {
+        "id": "waiver-trung-den-20261122-01",
+        "amount": 68119,
+        "recordedAt": "2026-11-22T11:55:18Z"
+      },
+      "replacedBy": [
+        "receipt-trung-den-20261123-01",
+        "waiver-trung-den-rounding-20261123-01"
+      ]
+    }
+  ]
 }

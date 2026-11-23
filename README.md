@@ -37,3 +37,8 @@ Chưa kiểm chứng nhận yêu cầu thực tế trên Netlify vì chưa có d
 ## Khoản đóng được xác nhận ngoài Excel
 
 `scripts/confirmed-payments.json` lưu các khoản admin đã xác nhận, được bỏ qua khi đưa mã lên GitHub. Chạy build để trừ khoản đóng vào tổng công nợ người đó. Không tự gán cho buổi khi chưa được chỉ định. Ngày ghi nhận khác ngày chuyển thực tế; không suy đoán ngày chuyển. Khi nhập file mới, đối soát để không ghi nhận cùng khoản hai lần. Không xóa khoản thu chỉ để ép công nợ về 0.
+
+
+## Lịch sử thanh toán
+
+Tab Đã đóng giữ lại người đã trả hết nợ. Ngày chuyển (paidDate / paidAt) tách khỏi thời điểm admin ghi nhận (recordedAt). Nếu admin chỉ nói khoảng một tuần trước, dùng paidDate với datePrecision=approximate và giữ paidAt=null; giao diện luôn có chữ Khoảng. Thanh toán sửa lại thay thế bản cũ, không cộng dồn cả hai. paymentCorrections giữ dấu vết sửa và không tham gia tính tiền. Tiền clear chênh lệch nằm trong adjustments, không cộng tiền thực thu.

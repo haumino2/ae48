@@ -1,0 +1,5 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const d=JSON.parse(fs.readFileSync(new URL('../dist/data.json',import.meta.url)));const ids=new Set();for(const p of d.payments||[]){assert(!ids.has(p.id));ids.add(p.id);assert(Number.isSafeInteger(p.amount)&&p.amount>0);assert(!Number.isNaN(Date.parse(p.recordedAt)));if(p.datePrecision==='approximate'){assert(/^\d{4}-\d{2}-\d{2}$/.test(p.paidDate));assert.equal(p.paidAt,null);}for(const id of p.supersedes||[])assert(!(d.payments||[]).some(active=>active.id===id));}
+for(const a of d.paymentCorrections||[]){assert(!ids.has(a.previousReceipt.id));assert(!(d.adjustments||[]).some(active=>active.id===a.previousAdjustment.id));}
+const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');assert(app.includes("['payments','check','Đã đóng']"));assert(app.includes("p.datePrecision==='approximate'?'Khoảng ':''"));assert(app.includes("state.page==='payments'?paymentRows()"));assert(!app.includes('D.demo'));
+console.log('Passed: unique active receipts, approximate dates, superseded records excluded, persistent payment history UI.');
